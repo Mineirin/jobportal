@@ -18,7 +18,7 @@ class Database {
 	
 	public function open_connection() {
 		try {
-		$this->conn = new PDO("mysqli:host=".server.";dbname=".database_name. "", user,pass);
+		$this->conn = new PDO("mysql:host=".server.";dbname=".database_name. "", user,pass);
 		// set the PDO error mode to exception
 		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			//echo "Connected successfully";
