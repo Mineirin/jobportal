@@ -6,8 +6,8 @@ if($_SESSION['name'])
  if($_POST['update'])
 {
 	include('dbconnection.php');
-mysql_query("update static set details ='" .($_POST['txt']). "' where static_id='".$_GET['id']."'");
-$update=mysql_affected_rows();
+mysqli_query("update static set details ='" .($_POST['txt']). "' where static_id='".$_GET['id']."'");
+$update=mysqli_affected_rows();
 
 
 }
@@ -51,7 +51,7 @@ echo	"<font color='none'>".$_SESSION['name']="Record updated"."</font>"; ?>
 <font style="font-family:Verdana, Geneva, sans-serif; color:#930;">
  <?php
 			  
-			   list($value)=mysql_fetch_array(mysql_query("select details  from static where static_id='".$_GET['id']."'"));
+			   list($value)=mysqli_fetch_array(mysqli_query("select details  from static where static_id='".$_GET['id']."'"));
 			   echo stripslashes($value);
 			  
 			  

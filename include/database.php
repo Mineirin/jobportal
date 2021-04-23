@@ -13,12 +13,12 @@ class Database {
 	function __construct() {
 		$this->open_connection();
 		$this->magic_quotes_active = get_magic_quotes_gpc();
-		$this->real_escape_string_exists = function_exists("mysql_real_escape_string");
+		$this->real_escape_string_exists = function_exists("mysqli_real_escape_string");
 	}
 	
 	public function open_connection() {
 		try {
-		$this->conn = new PDO("mysql:host=".server.";dbname=".database_name. "", user,pass);
+		$this->conn = new PDO("mysqli:host=".server.";dbname=".database_name. "", user,pass);
 		// set the PDO error mode to exception
 		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			//echo "Connected successfully";
@@ -98,7 +98,7 @@ class Database {
 	}	
 
 	public function fetch_array($result) {
-		return mysqli_fetch_array($result);
+		return mysqlii_fetch_array($result);
 	}
 	//gets the number or rows	
 
@@ -108,12 +108,12 @@ class Database {
 	}
   
 	public function affected_rows() {
-		return mysqli_affected_rows($this->conn);
+		return mysqlii_affected_rows($this->conn);
 	}
 	
 	 public function escape_value( $value ) {
 		// if( $this->real_escape_string_exists ) { // PHP v4.3.0 or higher
-		// 	// undo any magic quote effects so mysql_real_escape_string can do the work
+		// 	// undo any magic quote effects so mysqli_real_escape_string can do the work
 		// 	if( $this->magic_quotes_active ) { $value = stripslashes( $value ); }
 		// 	$value = $this->conn->quote( $value );
 		// } else { // before PHP v4.3.0

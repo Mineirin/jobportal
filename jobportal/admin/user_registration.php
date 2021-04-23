@@ -16,7 +16,7 @@ if(empty($_GET['page']))
 
 if($_GET['delete'])
 		  {
-		          mysql_query("delete from user_registration where id = '".$_GET['delete']."'");
+		          mysqli_query("delete from user_registration where id = '".$_GET['delete']."'");
                   $_SESSION['del']="data deleted !!";
 		  }
 		
@@ -115,8 +115,8 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
         <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
 		 <?php 
 			  $find=$_POST['search'];
-$str = mysql_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'   ");
-		$row=mysql_fetch_array($str);
+$str = mysqli_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'   ");
+		$row=mysqli_fetch_array($str);
 			{
 			if($row>0)
 			{
@@ -147,9 +147,9 @@ $str = mysql_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%'
 				
 				
 				
-			 $ret = mysql_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'   limit ".$start.",".$noofrecord."");
+			 $ret = mysqli_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'   limit ".$start.",".$noofrecord."");
 			$cnt=1;
-			while($row=mysql_fetch_array($ret))
+			while($row=mysqli_fetch_array($ret))
 			{
 			
 			?>
@@ -174,7 +174,7 @@ $str = mysql_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%'
 											 }
 											 ?>
           <?php
-		$anymatches=mysql_num_rows($ret); 
+		$anymatches=mysqli_num_rows($ret); 
 	if ($anymatches == 0) 
 		{ 
 			echo "<font color = red>Sorry, but we can not find an entry to match your query</font><br><br>"; 
@@ -189,7 +189,7 @@ $str = mysql_query("SELECT *FROM user_registration WHERE full_name LIKE'%$find%'
             </tr>
           <tr>
             <td class="heading" align="center">
-			<?php list($totalrecord)=mysql_fetch_array(mysql_query("select count(*) as tt FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'  "));
+			<?php list($totalrecord)=mysqli_fetch_array(mysqli_query("select count(*) as tt FROM user_registration WHERE full_name LIKE'%$find%' || email LIKE'%$find%' || dop LIKE'%$find%'  "));
 		echo "<strong>Total</strong>:" . $totalrecord;
 					?></td>
             <td colspan="3" class="heading" ><?php	

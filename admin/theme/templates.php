@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title><?php
                 // $query = "SELECT * FROM `tbltitle` WHERE TItleID=1";
-                // $res = mysql_query($query) or die(mysql_error());
-                // $viewTitle = mysql_fetch_assoc($res);
+                // $res = mysqli_query($query) or die(mysqli_error());
+                // $viewTitle = mysqli_fetch_assoc($res);
                 // echo $viewTitle['Title'];
             ?>
         </title>

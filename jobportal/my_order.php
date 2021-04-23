@@ -37,10 +37,10 @@
 	include("dbconnection.php");
 	$email=$_SESSION['EMAIL'];
 	$query="select * from my_order where email='$email' ";
-	$result=mysql_query("$query");
-	$count=mysql_num_rows($result);
+	$result=mysqli_query("$query");
+	$count=mysqli_num_rows($result);
 	$cart=array();
-	while($data=mysql_fetch_array($result))
+	while($data=mysqli_fetch_array($result))
 	{
 		$cart[]=$data;
 	}

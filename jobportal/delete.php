@@ -5,6 +5,6 @@ $a="";
 $a=$_GET['x'];
 include("dbconnection.php");
 $query="delete from cart where ser_name='$a' and email='$email' ";
-$res=mysql_query($query);
+$res=mysqli_query($query);
 header("location:data1.php");
 ?>

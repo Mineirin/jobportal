@@ -35,7 +35,7 @@
 			$fd2=$_POST['d'.$i];
 			$print=$_POST['e'.$i];
 			$query="update rw_inter_nat set amount='$amount',cover='$cover',fd1='$fd1',fd2='$fd2',print='$print' where exp_id='$i' ";
-			$res=mysql_query($query);
+			$res=mysqli_query($query);
 		}
 		if($res)
 		{
@@ -57,8 +57,8 @@
 			$rwi = array();
 			include("dbconnection.php");
 			$query="select * from rw_inter_nat";
-			$result=mysql_query($query);
-			while($data=mysql_fetch_array($result))
+			$result=mysqli_query($query);
+			while($data=mysqli_fetch_array($result))
 			{
 				$rwi[]=$data;
 			}

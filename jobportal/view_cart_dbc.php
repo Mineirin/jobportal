@@ -3,10 +3,10 @@
 		$email=$_SESSION['EMAIL'];
 		include("dbconnection.php");
 		$query="select order_id from order_id where email='$email' ";
-		$result=mysql_query("$query");
-		$count=mysql_num_rows($result);
+		$result=mysqli_query("$query");
+		$count=mysqli_num_rows($result);
 		$ord=array();
-		while($data=mysql_fetch_array($result))
+		while($data=mysqli_fetch_array($result))
 		{
 			$ord[]=$data;
 		}
@@ -51,10 +51,10 @@
 		//-------------------------------------------
 		$my_ser_name[]=array();
 		$query="select ser_name from cart where email='$email' and odat='$dat' ";
-		$result=mysql_query("$query");
-		$count=mysql_num_rows($result);
+		$result=mysqli_query("$query");
+		$count=mysqli_num_rows($result);
 		$cart=array();
-		while($data=mysql_fetch_array($result))
+		while($data=mysqli_fetch_array($result))
 		{
 			$cart[]=$data;
 		}
@@ -67,30 +67,30 @@
 
 
 		$query2="select * from my_order where email='$email' and order_date='$dat' and product_name='$s_n'  and order_status='0' and payment_status='0' ";
-		$result2=mysql_query("$query2");
-		$count2=mysql_num_rows($result2);
+		$result2=mysqli_query("$query2");
+		$count2=mysqli_num_rows($result2);
 	//	echo"rrrrrrr=====$count2";
 	//	if($count2==0)
 	//	{
 			$query3="select * from my_order where email='$email' and order_date='$dat' and order_id='$order_id' and order_status='0' and payment_status='0' ";
-			$result3=mysql_query("$query3");
-			$count3=mysql_num_rows($result3);
+			$result3=mysqli_query("$query3");
+			$count3=mysqli_num_rows($result3);
 		//	echo"hghghhghg====$count3";
 	//		if($count3==0)
 	//		{
 				$query5="insert into my_order values('$email','$order_id','$dat','$s_n','$grand_total1','0','0')";
-				$res=mysql_query("$query5");
+				$res=mysqli_query("$query5");
 				$query6="update order_id set order_id='$order_id' where email='$email' ";
-				$res6=mysql_query("$query6");
+				$res6=mysqli_query("$query6");
 //			}
 	//		else
 	//		{
 	//			$query="delete from my_order where email='$email' and order_date='$dat' and order_id='$order_id' and order_status='0' and payment_status='0' ";
-	//			$res=mysql_query($query);
+	//			$res=mysqli_query($query);
 	//			$query5="insert into my_order values('$email','$order_id','$dat','$s_n','$grand_total1','0','0')";
-	//			$res=mysql_query("$query5");
+	//			$res=mysqli_query("$query5");
 	//			$query7="update order_id set order_id='$order_id' where email='$email' ";
-	//			$res7=mysql_query("$query6");
+	//			$res7=mysqli_query("$query6");
 
 		//	}//if close
 		//	else
@@ -104,23 +104,23 @@
 //-------------------------------------------
 //---------------------------------------------------------------------
 	/*	$query="select * from cart where email='$email' and odat='$dat' ";
-		$result=mysql_query("$query");
-		$count=mysql_num_rows($result);
+		$result=mysqli_query("$query");
+		$count=mysqli_num_rows($result);
 		$cart=array();
-		while($data=mysql_fetch_array($result))
+		while($data=mysqli_fetch_array($result))
 		{
 			$cart[]=$data;
 		}
 		foreach($cart as $c)
 		{
 			$query2="select * from my_order where email='$email' and order_date='$c[9]' and product_name='$c[2]' and order_id='$order_id' ";
-			$result2=mysql_query("$query2");
-			$count2=mysql_num_rows($result2);
+			$result2=mysqli_query("$query2");
+			$count2=mysqli_num_rows($result2);
 
 			if($count2==0)
 			{
 				$query1="insert into my_order values('$email','$order_id','$c[9]','$c[2]','$c[8]','','')";
-				$res=mysql_query("$query1");
+				$res=mysqli_query("$query1");
 			}
 		}
 */

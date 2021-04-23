@@ -25,8 +25,8 @@ if(isset($_POST['groth_pack']))
 
 	include("dbconnection.php");
 	$query="select * from user_registration where email='$email' ";
-	$result=mysql_query("$query");
-	$login=mysql_num_rows($result);
+	$result=mysqli_query("$query");
+	$login=mysqli_num_rows($result);
 	if($login > 0)
 	{
 
@@ -57,8 +57,8 @@ if(isset($_POST['RF']))
 
 	include("dbconnection.php");
 	$query="select * from user_registration where email='$email' ";
-	$result=mysql_query("$query");
-	$login=mysql_num_rows($result);
+	$result=mysqli_query("$query");
+	$login=mysqli_num_rows($result);
 	if($login==1)
 	{
 		header("location:view_cart.php");

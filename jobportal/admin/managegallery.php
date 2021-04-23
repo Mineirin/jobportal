@@ -6,7 +6,7 @@ if($_SESSION['name'])
 include('dbconnection.php');
 if($_GET['delete'])
 	{
-		$b=mysql_query("delete from slider where slider_id='".$_GET['delete']."'");
+		$b=mysqli_query("delete from slider where slider_id='".$_GET['delete']."'");
 	}
 	
 ?>
@@ -51,10 +51,10 @@ echo "<font color='#00FF00'>Image  Has been Successfully Deleted!"; ?></td></tr>
    
   </tr>
   <?php
-  $q=mysql_query("select * from slider");
+  $q=mysqli_query("select * from slider");
   $i = 1;
 
-  while($way=mysql_fetch_array($q))
+  while($way=mysqli_fetch_array($q))
   {
 	  ?>
   <tr>

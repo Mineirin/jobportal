@@ -66,8 +66,8 @@ switch ($action) {
 				$maxrow = $mydb->num_rows($cur);
 
 
-				// $res = mysqli_query($sql) or die(mysql_error());
-				// $maxrow = mysql_num_rows($res);
+				// $res = mysqlii_query($sql) or die(mysqli_error());
+				// $maxrow = mysqli_num_rows($res);
 				if ($maxrow > 0) { 
 					# code... 
 					message("Employee ID already in use!", "error");

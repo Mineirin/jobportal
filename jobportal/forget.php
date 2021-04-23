@@ -100,12 +100,12 @@ return false;
 //					echo"$con<br>";
 
 					$query_check="select * from user_registration where email='$email' and mob_no='$mobile' ";
-					$result1=mysql_query($query_check);
-					$count1=mysql_num_rows($result1);
+					$result1=mysqli_query($query_check);
+					$count1=mysqli_num_rows($result1);
 					if($count1 > 0)
 					{
 						$query="update user_registration set crpass='$npwd',conpass='$cpwd' where email='$email' and mob_no='$mobile'";
-						$res=mysql_query($query);
+						$res=mysqli_query($query);
 						if($res)
 						{
 							echo "<script>alert('success')</script>";

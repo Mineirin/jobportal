@@ -1,8 +1,8 @@
 <?php
 	session_start();
 	include("dbconnection.php");
-	$result=mysql_query("select * from jobs_category");
-	while($data=mysql_fetch_array($result))
+	$result=mysqli_query("select * from jobs_category");
+	while($data=mysqli_fetch_array($result))
 	{
 		$job_c[]=$data;
 	}
@@ -46,20 +46,20 @@
 			{
 				include("dbconnection.php");
 				$query="select * from jobs where skills like '$skills%' and city like '$city%' ";
-				$res=mysql_query($query);
-				$cnt=mysql_num_rows($res);
-				while($data = mysql_fetch_array($res))
+				$res=mysqli_query($query);
+				$cnt=mysqli_num_rows($res);
+				while($data = mysqli_fetch_array($res))
 				{
 								echo"<table align='center' background='images/bg-welcome.png' width='700px' height='auto' border='0'>
 								<tr><td width='200'></td><td width='10'><img src='ppp.png'></td></tr>
 								<tr><td width='200'></td><td width='10'><img src='ppp.png'></td><td width='80px' align='center'><a href='login.php'><img src='apply.jpg' height='30px' width='80px'></a></td></tr>
 								<tr><td width='200'><font color = '#191970' size=5 face='times new romon'><b><u>";
 									$query1="select * from jobs_category where category_code='$data[job_category]' ";
-									$res1=mysql_query($query1);
-									$cnt1=mysql_num_rows($res1);
+									$res1=mysqli_query($query1);
+									$cnt1=mysqli_num_rows($res1);
 									for($i=0;$i<$cnt1;$i++)
 									{
-										$a=mysql_result($res1,$i,'jobs_category');
+										$a=mysqli_result($res1,$i,'jobs_category');
 										echo"<font color = '#191980' size=5 face='times new romon'>$a</font>";
 									}
 								echo"</u></b></font></td><td width='10'><img src='ppp.png'></td></tr>

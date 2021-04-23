@@ -13,8 +13,8 @@
 <table>
 <?php 
 include('dbconnection.php');
-$nice=mysql_query("select * from static");
-while($way=mysql_fetch_array($nice))
+$nice=mysqli_query("select * from static");
+while($way=mysqli_fetch_array($nice))
 {
 ?>
 <tr>

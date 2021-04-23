@@ -3,8 +3,8 @@
 	include("dbconnection.php");
         $sid=session_id();
 	$_SESSION['USER_ID']=$sid;
-	$result=mysql_query("select * from jobs_category");
-	while($data=mysql_fetch_array($result))
+	$result=mysqli_query("select * from jobs_category");
+	while($data=mysqli_fetch_array($result))
 	{
 		$job_c[]=$data;
 	}
@@ -318,8 +318,8 @@ Kuwaiti Coasts (KC)</font></td>
   <td style="width:318px; height:300px; background-color:#EFEFEF; border:solid 0px #CCCCCC;">
 <marquee behavior="scroll" direction="up" scrollamount="3" onmouseover="stop();" onmouseout="start();"  onmousemove="stop"  style="height:300px;">
 <?php include('dbconnection.php');
-$server=mysql_query("select * from static where page='Testimonials'");
-while($get=mysql_fetch_array($server))
+$server=mysqli_query("select * from static where page='Testimonials'");
+while($get=mysqli_fetch_array($server))
 {
        echo $get['details'];
 }

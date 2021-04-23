@@ -11,7 +11,7 @@ if(empty($_GET['page']))
 	$start=$noofrecord * $_GET['page'];
 if($_GET['ide'])
 		  {
-		          mysql_query("delete from tbl_img where id = '".$_GET['ide']."'");
+		          mysqli_query("delete from tbl_img where id = '".$_GET['ide']."'");
                   $_SESSION['del']="data deleted !!";
 		  }
 ?>
@@ -61,9 +61,9 @@ if($_GET['ide'])
 		   
            <?php 
 											  
-			$ret=mysql_query("SELECT * FROM tbl_img limit ".$start.",".$noofrecord."");
+			$ret=mysqli_query("SELECT * FROM tbl_img limit ".$start.",".$noofrecord."");
 			$cnt=1;
-			while($row=mysql_fetch_array($ret))
+			while($row=mysqli_fetch_array($ret))
 			{	
 			?>
 			

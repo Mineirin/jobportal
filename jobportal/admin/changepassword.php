@@ -7,13 +7,13 @@ if(isset($_SESSION['name']))
  include('dbconnection.php');
 	     if(isset($_POST['sbt']))
 	      {
-			  $qry=mysql_query(" select password from login where password='".$_POST['oldpwd']."'");
-			  $way=mysql_fetch_array($qry);
+			  $qry=mysqli_query(" select password from login where password='".$_POST['oldpwd']."'");
+			  $way=mysqli_fetch_array($qry);
 			  if($way>0)
 			 if ($_POST["npwd"]==$_POST["cpwd"])
 			 {
 			  
-			  $car=mysql_query("update login set password='".$_POST['npwd']."'". " where id='1'");
+			  $car=mysqli_query("update login set password='".$_POST['npwd']."'". " where id='1'");
 			  
 			  echo ("password successfully updated");
 			  }

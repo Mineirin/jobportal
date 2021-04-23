@@ -46,22 +46,22 @@
 				$email=$_SESSION['EMAIL'];$service_name=$_SESSION['SERVICE'];$dat=date('y/m/d');
 				$vch[]=array();
 				$query="select * from cart where email='$sid' and odat='$dat' ";
-				$result=mysql_query($query);
-				$count=mysql_num_rows($result);
-				while($data=mysql_fetch_array($result))
+				$result=mysqli_query($query);
+				$count=mysqli_num_rows($result);
+				while($data=mysqli_fetch_array($result))
 				{
 							$email=$_SESSION['EMAIL'];
 							$query1="select * from cart where email='$email' and ser_name='$data[2]' and odat='$dat' ";
-							$result1=mysql_query($query1);
-							$count1=mysql_num_rows($result1);
+							$result1=mysqli_query($query1);
+							$count1=mysqli_num_rows($result1);
 							if($count1!=0)
 							{
 								$query2="delete from cart where email='$email' and ser_name='$data[2]' and odat='$dat' ";
-								mysql_query($query2);
+								mysqli_query($query2);
 							}
 				}
 				$change_email="update cart set email='$email' where email='$user_id' ";
-				mysql_query($change_email);
+				mysqli_query($change_email);
 				?>
 		<?php
 					$butn=$_SESSION['BUTN'];
@@ -80,13 +80,13 @@
 			//*******************************************************
 
 							$ser_chack="select * from cart where email='$email' and ser_name='$service_name' and odat='$dat' ";
-							$ress=mysql_query($ser_chack);
-							$count=mysql_num_rows($ress);
+							$ress=mysqli_query($ser_chack);
+							$count=mysqli_num_rows($ress);
 							if($count==0)
 							{
 								include("dbconnection.php");
 								$query1="insert into cart values('$email','$amount','$service_name','','','','$total','$tex','$grand_total','$dat')";
-								$res=mysql_query("$query1");
+								$res=mysqli_query("$query1");
 							}
 							else
 							{
@@ -115,13 +115,13 @@
 							//*******************************
 								$ser_chack="select * from cart where email='$email' and ser_name='$service_name' and odat='$dat' ";
 								// $ser_chack="select * from cart where ser_name='$service_name' and odat='$dat' ";
-								$ress1=mysql_query($ser_chack);
-								$count1=mysql_num_rows($ress1);
+								$ress1=mysqli_query($ser_chack);
+								$count1=mysqli_num_rows($ress1);
 								if($count1==0)
 								{
 
 									$query2="insert into cart values('$email','$amount','$service_name','$cover','$print','$fast_del','$total','$tex','$grand_total','$dat')";
-									$res=mysql_query("$query2");
+									$res=mysqli_query("$query2");
 								}
 								else
 								{
@@ -140,12 +140,12 @@
 			$email=$_SESSION['EMAIL'];
 			include("dbconnection.php");
 			$query="select * from cart where email='$email' and odat='$dat' ";
-			$result=mysql_query("$query");
-			$count=mysql_num_rows($result);
+			$result=mysqli_query("$query");
+			$count=mysqli_num_rows($result);
 			$cart=array();
 			if($count != 0)
 			{
-			while($data=mysql_fetch_array($result))
+			while($data=mysqli_fetch_array($result))
 			{
 				$cart[]=$data;
 			}

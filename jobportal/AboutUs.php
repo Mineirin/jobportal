@@ -36,8 +36,8 @@
 		
 		
 			include('dbconnection.php');
-$server=mysql_query("select * from static where page='About Us'");
-while($get=mysql_fetch_array($server))
+$server=mysqli_query("select * from static where page='About Us'");
+while($get=mysqli_fetch_array($server))
 {
        echo $get['details']; 
 }

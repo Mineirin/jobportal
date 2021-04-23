@@ -1,9 +1,9 @@
 <?php session_start(); ?>
 <?php
 $cover=0;
-$id = $_REQUEST['id'];mysql_connect('localhost','naukri2j_jobs','avlsoft123') or die(mysql_error());mysql_select_db('naukri2j_naukri');$result = mysql_query("select * from rw_both WHERE exp_id=$id") or die(mysql_error());
+$id = $_REQUEST['id'];mysqli_connect('localhost','naukri2j_jobs','avlsoft123') or die(mysqli_error());mysqli_select_db('naukri2j_naukri');$result = mysqli_query("select * from rw_both WHERE exp_id=$id") or die(mysqli_error());
 $amount = array();
-while($data = mysql_fetch_array($result))
+while($data = mysqli_fetch_array($result))
 {
 	$amount[] = $data;
 }

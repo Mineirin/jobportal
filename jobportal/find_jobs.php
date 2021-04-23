@@ -1,7 +1,7 @@
 <?php
 	include("dbconnection.php");
-	$result=mysql_query("select * from jobs_category");
-	while($data=mysql_fetch_array($result))
+	$result=mysqli_query("select * from jobs_category");
+	while($data=mysqli_fetch_array($result))
 	{
 		$job_c[]=$data;
 	}

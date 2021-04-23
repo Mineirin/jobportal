@@ -1,9 +1,9 @@
 <?php
-	mysql_connect('localhost','resume2n','balbeer@213') or die(mysql_error());
-	mysql_select_db('resume2n_resume');
-	$result = mysql_query('select * from experience');
+	mysqli_connect('localhost','resume2n','balbeer@213') or die(mysqli_error());
+	mysqli_select_db('resume2n_resume');
+	$result = mysqli_query('select * from experience');
 	$states = array();
-	while($data = mysql_fetch_array($result))
+	while($data = mysqli_fetch_array($result))
 	{
 	    $exp[] = $data;
 	}
@@ -31,18 +31,18 @@ function reval()
 	cover=cover.replace("Rs. ","");
  	cover=parseInt(cover);
 	var x=document.getElementById("check1").checked;
-  	if(x == true)
-  	{
-  			ih=ih+cover;
+ï¿½ï¿½	if(x == true)
+ï¿½ï¿½	{
+ï¿½ï¿½			ih=ih+cover;
 			document.getElementById("tot_amount").innerHTML = "Rs. "+ih;
 			document.getElementById("tot_amount1").innerHTML = "Rs. "+ih;
-  	}
- if(x == false)
-   	{
+ï¿½ï¿½	}
+ï¿½if(x == false)
+ ï¿½ï¿½	{
  			ih=ih-cover;
  			document.getElementById("tot_amount").innerHTML = "Rs. "+ih;
  			document.getElementById("tot_amount1").innerHTML = "Rs. "+ih;
-  	}
+ï¿½ï¿½	}
 }
 </script>
 <script type="text/javascript">

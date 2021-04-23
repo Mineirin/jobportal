@@ -1,9 +1,9 @@
 <?php session_start(); ?>
 <?php
 $cover=0;
-$id = $_REQUEST['id'];mysql_connect('localhost','root','') or die(mysql_error());mysql_select_db('naukri2jobs');$result = mysql_query("select * from groth_pack WHERE exp_id=$id") or die(mysql_error());
+$id = $_REQUEST['id'];mysqli_connect('localhost','root','') or die(mysqli_error());mysqli_select_db('naukri2jobs');$result = mysqli_query("select * from groth_pack WHERE exp_id=$id") or die(mysqli_error());
 $amount = array();
-while($data = mysql_fetch_array($result))
+while($data = mysqli_fetch_array($result))
 {
 	$amount[] = $data;
 }

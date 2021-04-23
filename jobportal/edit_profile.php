@@ -3,11 +3,11 @@
 	$email=$_SESSION['EMAIL'];
 	include("dbconnection.php");
 	$query="select * from user_registration where email='$email' ";
-	$result=mysql_query($query);
-	$cnt=mysql_num_rows($result);
+	$result=mysqli_query($query);
+	$cnt=mysqli_num_rows($result);
 	if($cnt>0)
 	{
-		while($data=mysql_fetch_array($result))
+		while($data=mysqli_fetch_array($result))
 		{
 				$user_data[]=$data;
 		}
@@ -129,7 +129,7 @@ function validation()
 		{
 			$query="update user_registration set id='$id',email='$email', full_name='$full_name',cur_loc='$cur_loc',exp_year='$exp_year',key_skill='$key_skill',profile='$profile',comp_name='$comp_name',basicedu='$basicedu',resume='$resume',dop='$dat' where email='$email' ";
 		}
-		$res=mysql_query($query);
+		$res=mysqli_query($query);
 		if($res)
 		{
 			echo "<script>alert('success')</script>";

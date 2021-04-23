@@ -1,10 +1,10 @@
 <?php session_start(); ?>
 <?php
-	mysql_connect('localhost','root','') or die(mysql_error());
-	mysql_select_db('naukri2jobs');
-	$result = mysql_query('select * from experience');
+	mysqli_connect('localhost','root','') or die(mysqli_error());
+	mysqli_select_db('naukri2jobs');
+	$result = mysqli_query('select * from experience');
 	$states = array();
-	while($data = mysql_fetch_array($result))
+	while($data = mysqli_fetch_array($result))
 	{
 	    $exp[] = $data;
 	}

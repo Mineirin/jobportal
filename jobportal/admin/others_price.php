@@ -31,7 +31,7 @@
 		{
 			$amount=$_POST['a'.$i];
 			$query="update resume_frwd_price set price='$amount' where ser_no='$i' ";
-			$res=mysql_query($query);
+			$res=mysqli_query($query);
 		}
 		if($res)
 		{
@@ -55,8 +55,8 @@
 			$rwi = array();
 			include("dbconnection.php");
 			$query="select * from resume_frwd_price";
-			$result=mysql_query($query);
-			while($data=mysql_fetch_array($result))
+			$result=mysqli_query($query);
+			while($data=mysqli_fetch_array($result))
 			{
 				$rwi[]=$data;
 			}

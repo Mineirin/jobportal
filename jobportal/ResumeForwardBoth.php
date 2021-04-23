@@ -91,8 +91,8 @@
 
 
 			include('dbconnection.php');
-$server=mysql_query("select * from static where page='ResumeForwardBoth'");
-while($get=mysql_fetch_array($server))
+$server=mysqli_query("select * from static where page='ResumeForwardBoth'");
+while($get=mysqli_fetch_array($server))
 {
        echo $get['details'];
 }
@@ -109,9 +109,9 @@ while($get=mysql_fetch_array($server))
 		<form method='post' action='data.php' name='frm1'>
 					<?php include('dbconnection.php');
 					$ser="Resume Forward Both";
-					$result=mysql_query("select * from resume_frwd_price where detail='$ser' ");
+					$result=mysqli_query("select * from resume_frwd_price where detail='$ser' ");
 					$resume=array();
-					while($data=mysql_fetch_array($result))
+					while($data=mysqli_fetch_array($result))
 					{
 				       $resume[]=$data;
 					} ?>

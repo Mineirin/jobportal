@@ -16,7 +16,7 @@ if($name1!="")
 if(move_uploaded_file ($tmppath, 'uploadimg/'.$name1))//image is a folder in which you will save image
 {
 $query="insert into tbl_img set photo='$name1'";
-mysql_query ($query) or die ('could not updated:'.mysql_error());
+mysqli_query ($query) or die ('could not updated:'.mysqli_error());
 echo "<script>alert('Your image upload successfully !!');</script>";
 }
 }

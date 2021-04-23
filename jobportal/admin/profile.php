@@ -55,8 +55,8 @@ td.rows{
 <body>
 <table width="100%" border="0">
 <?php 
-		 $ret= mysql_query("SELECT *FROM user_registration where id='".$_GET['id']."'");
-			while($row=mysql_fetch_array($ret))
+		 $ret= mysqli_query("SELECT *FROM user_registration where id='".$_GET['id']."'");
+			while($row=mysqli_fetch_array($ret))
 			{
 			
 			?>

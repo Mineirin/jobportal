@@ -6,8 +6,8 @@ include('dbconnection.php');
 $_SESSION['name']=$_POST['name'];
 $password=$_POST['password'];
 
-$qry=mysql_query("select * from login");
-if($q=mysql_fetch_array($qry))
+$qry=mysqli_query("select * from login");
+if($q=mysqli_fetch_array($qry))
 {
 	if($q[1]== $_SESSION['name'] && $q[2]== $password)
 	{

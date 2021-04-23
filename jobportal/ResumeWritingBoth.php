@@ -2,9 +2,9 @@
 <?php
 	include"dbconnection.php";
 	$query="select * from experience";
-	$result = mysql_query($query);
+	$result = mysqli_query($query);
 	$states = array();
-	while($data = mysql_fetch_array($result))
+	while($data = mysqli_fetch_array($result))
 	{
 	    $exp[] = $data;
 	}
@@ -175,8 +175,8 @@ display:none;
 	
 	 <?php
 			include('dbconnection.php');
-$server=mysql_query("select * from static where page='ResumeWritingBoth'");
-while($get=mysql_fetch_array($server))
+$server=mysqli_query("select * from static where page='ResumeWritingBoth'");
+while($get=mysqli_fetch_array($server))
 {
        echo $get['details'];
 }

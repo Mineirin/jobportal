@@ -12,7 +12,7 @@ $date=date('d/m/y');
 	
 	 $a=move_uploaded_file($_FILES["file"]["tmp_name"], "slider/" . $d);
 	      
-		 $b= mysql_query("insert into slider(image,doc) values('$d','$date')");
+		 $b= mysqli_query("insert into slider(image,doc) values('$d','$date')");
 	
 }
 ?>

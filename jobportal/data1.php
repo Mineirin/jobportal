@@ -104,13 +104,13 @@ $(document).ready(function(){
 				$grand_total=$_SESSION['GRAND'];
 				//----------------------------------hgjghgkhkjh---------------------------------------------
 				$ser_chack="select * from cart where ser_name='$service_name' and email='$user_id' and odat='$dat' ";
-				$ress=mysql_query($ser_chack);
-				$count=mysql_num_rows($ress);
+				$ress=mysqli_query($ser_chack);
+				$count=mysqli_num_rows($ress);
 					if($count==0)
 				{
 					include("dbconnection.php");
 					$query1="insert into cart values('$user_id','$amount','$service_name','','','','$total','$tex','$grand_total','$dat')";
-					$res=mysql_query("$query1");
+					$res=mysqli_query("$query1");
 
 				}
 				else
@@ -142,13 +142,13 @@ $(document).ready(function(){
 				$grand_total=$_SESSION['GRAND_TOTAL'];
 				//*******************************
 					$ser_chack="select * from cart where ser_name='$service_name' and email='$user_id' and odat='$dat' ";
-					$ress1=mysql_query($ser_chack);
-					$count1=mysql_num_rows($ress1);
+					$ress1=mysqli_query($ser_chack);
+					$count1=mysqli_num_rows($ress1);
 					if($count1==0)
 					{
 
 						$query2="insert into cart values('$user_id','$amount','$service_name','$cover','$print','$fast_del','$total','$tex','$grand_total','$dat')";
-						$res=mysql_query("$query2");
+						$res=mysqli_query("$query2");
 					}
 					else
 					{
@@ -167,12 +167,12 @@ $(document).ready(function(){
 			$user_id=$_SESSION['USER_ID'];
 			include("dbconnection.php");
 			$query="select * from cart where email='$user_id' and odat='$dat' ";
-			$result=mysql_query("$query");
-			$count=mysql_num_rows($result);
+			$result=mysqli_query("$query");
+			$count=mysqli_num_rows($result);
 			$cart=array();
 			if($count != 0)
 			{
-			while($data=mysql_fetch_array($result))
+			while($data=mysqli_fetch_array($result))
 			{
 				$cart[]=$data;
 			}

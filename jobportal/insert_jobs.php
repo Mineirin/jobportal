@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php
 	include("dbconnection.php");
-	$result=mysql_query("select * from jobs_category");
-	while($data=mysql_fetch_array($result))
+	$result=mysqli_query("select * from jobs_category");
+	while($data=mysqli_fetch_array($result))
 	{
 		$job_c[]=$data;
 	}
@@ -49,7 +49,7 @@
 				{
 					include("dbconnection.php");
 									$query="insert into jobs values('','$skills','$city','$description','$experience','$job_category','$salary_expect')";
-									$res=mysql_query("$query");
+									$res=mysqli_query("$query");
 									if($res==1)
 									{
 									//	echo"Data Saved";

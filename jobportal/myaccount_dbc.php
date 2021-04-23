@@ -15,11 +15,11 @@
 				{
 						include("dbconnection.php");
 						$query="select * from user_registration where email='$email' and crpass='$crpass' ";
-						$res=mysql_query("$query");
-						$cnt=mysql_num_rows($res);
+						$res=mysqli_query("$query");
+						$cnt=mysqli_num_rows($res);
 						for($i=0;$i<$cnt;$i++)
 						{
-							$name=mysql_result($res,$i,"full_name");
+							$name=mysqli_result($res,$i,"full_name");
 						}
 						if($cnt > 0)
 						{

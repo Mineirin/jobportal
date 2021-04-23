@@ -98,12 +98,12 @@ function validation()
 		$conpass=$_POST['conpass'];
 
 		$query_check="select * from user_registration where crpass='$oldpass' and email='$email' ";
-		$result=mysql_query($query_check);
-		$count=mysql_num_rows($result);
+		$result=mysqli_query($query_check);
+		$count=mysqli_num_rows($result);
 		if($count > 0)
 		{
 				$query="update user_registration set crpass='$newpass',conpass='$conpass' where crpass='$oldpass' and email='$email' ";
-				$res=mysql_query($query);
+				$res=mysqli_query($query);
 				if($res)
 				{
 					echo"<script>alert('success')</script>";
