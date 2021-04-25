@@ -11,18 +11,18 @@ defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.
 defined('LIB_PATH') ? null : define ('LIB_PATH',SITE_ROOT.DS.'include');
 
 //load the database configuration first.
-require_once("include/config.php");
-require_once("include/function.php");
-require_once("include/session.php");
-require_once("include/accounts.php");
-require_once("include/autonumbers.php");  
-require_once("include/companies.php");  
-require_once("include/job.php");  
-require_once("include/employees.php");  
-require_once("include/categories.php");  
-require_once("include/applicant.php");  
-require_once("include/jobregistration.php");  
+include_once(LIB_PATH.DS."config.php");
+include_once(LIB_PATH.DS."function.php");
+include_once(LIB_PATH.DS."session.php");
+include_once(LIB_PATH.DS."accounts.php");
+include_once(LIB_PATH.DS."autonumbers.php");  
+include_once(LIB_PATH.DS."companies.php");  
+include_once(LIB_PATH.DS."job.php");  
+include_once(LIB_PATH.DS."employees.php");  
+include_once(LIB_PATH.DS."categories.php");  
+include_once(LIB_PATH.DS."applicant.php");  
+include_once(LIB_PATH.DS."jobregistration.php");  
   
 
-require_once("include/database.php");
+include_once(LIB_PATH.DS."database.php");
 ?>
