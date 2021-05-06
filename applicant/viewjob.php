@@ -64,50 +64,50 @@ global $mydb;
 }
 </style>
 <form action="controller.php?action=approve" method="POST">
-<div class="col-sm-12 content-header" style="">View Details</div>
+<div class="col-sm-12 content-header" style="">Ver detalhes</div>
 <div class="col-sm-12 content-body" >  
 	<h3><?php echo $job->OCCUPATIONTITLE; ?></h3>
 	<input type="hidden" name="JOBREGID" value="<?php echo $jobreg->REGISTRATIONID;?>">
 
 	<div class="col-sm-6">
 		<ul>
-            <li><i class="fp-ht-bed"></i>Required No. of Employee's : <?php echo $job->REQ_NO_EMPLOYEES; ?></li>
-            <li><i class="fp-ht-food"></i>Salary : <?php echo number_format($job->SALARIES,2);  ?></li>
-            <li><i class="fa fa-sun-"></i>Duration of Employment : <?php echo $job->DURATION_EMPLOYEMENT; ?></li>
+            <li><i class="fp-ht-bed"></i>Número de funcionários: <?php echo $job->REQ_NO_EMPLOYEES; ?></li>
+            <li><i class="fp-ht-food"></i>Salario: <?php echo number_format($job->SALARIES,2);  ?></li>
+            <li><i class="fa fa-sun-"></i>Duração do emprego: <?php echo $job->DURATION_EMPLOYEMENT; ?></li>
         </ul>
 	</div> 
 	<div class="col-sm-6">
 		<ul> 
-            <li><i class="fp-ht-tv"></i>Prefered Sex : <?php echo $job->PREFEREDSEX; ?></li>
-            <li><i class="fp-ht-computer"></i>Sector of Vacancy : <?php echo $job->SECTOR_VACANCY; ?></li>
+            <li><i class="fp-ht-tv"></i>Preferencia de sexo: <?php echo $job->PREFEREDSEX; ?></li>
+            <li><i class="fp-ht-computer"></i>Setor de Vaga: <?php echo $job->SECTOR_VACANCY; ?></li>
         </ul>
 	</div>
 	<div class="col-sm-12">
-		<p>Job Description : </p>   
+		<p>Descrição do trabalho: </p>   
 		<p style="margin-left: 15px;"><?php echo $job->JOBDESCRIPTION;?></p>
 	</div>
 	<div class="col-sm-12"> 
-		<p>Qualification/Work Experience : </p>
+		<p>Qualificação/Experiência Profissional: </p>
 		<p style="margin-left: 15px;"><?php echo $job->QUALIFICATION_WORKEXPERIENCE; ?></p>
 	</div>
 	<div class="col-sm-12"> 
-		<p>Employeer : </p>
+		<p>Empregador: </p>
 		<p style="margin-left: 15px;"><?php echo $comp->COMPANYNAME ; ?></p> 
 		<p style="margin-left: 15px;">@ <?php echo $comp->COMPANYADDRESS ; ?></p>
 	</div>
 </div>
  
 <div class="col-sm-12 content-footer">
-<p><i class="fa fa-paperclip"></i>  Attachment Files</p>
+<p><i class="fa fa-paperclip"></i> Arquivos de Anexo</p>
 	<div class="col-sm-12 slider">
-		 <h3>Download Resume <a href="<?php echo web_root.'applicant/'.$attachmentfile->FILE_LOCATION; ?>">Here</a></h3>
+		 <h3>Baixar currículo <a href="<?php echo web_root.'applicant/'.$attachmentfile->FILE_LOCATION; ?>">Here</a></h3>
 	</div>  
 	<div class="col-sm-12">
 		<p>Feedback</p>
 		<p><?php echo isset($jobreg->REMARKS) ? $jobreg->REMARKS : ""; ?></p>
 	</div>
 	<div class="col-sm-12  submitbutton "> 
-		<a href="index.php?view=appliedjobs" class="btn btn-primary fa fa-arrow-left">Back</a>
+		<a href="index.php?view=appliedjobs" class="btn btn-primary fa fa-arrow-left">Voltar</a>
 	</div> 
 </div>
 </form>

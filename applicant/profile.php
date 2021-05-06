@@ -9,8 +9,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Profile</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Profile</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Início <i class="ion-ios-arrow-forward"></i></a></span> <span>Perfil</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Perfil</h1>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-12">
-              <h2 class="pageTitle">Profile</h2>
+              <h2 class="pageTitle">Perfil</h2>
           </div>
       </div>
   </div>
@@ -49,8 +49,8 @@
              </div>
           <ul class="list-group"> 
          
-            <li class="list-group-item text-muted">Profile</li> 
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name</strong></span> 
+            <li class="list-group-item text-muted">Perfil</li> 
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Nome real</strong></span> 
              <?php echo $applicant->FNAME .' '.substr($applicant->MNAME, 1,2).'. '.$applicant->LNAME; ?> 
              </li>
             
@@ -59,12 +59,12 @@
 
           <div class="box box-solid">  
             <div class="box-body no-padding"> 
-                <p class="<?php echo ($view=='appliedjobs' || $view=='') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=appliedjobs'; ?>"><i class="fa fa-list"></i> Applied Jobs
+                <p class="<?php echo ($view=='appliedjobs' || $view=='') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=appliedjobs'; ?>"><i class="fa fa-list"></i> Empregos aplicados
                    </a></p>
-                  <p class="<?php echo ($view=='accounts') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=accounts'; ?>"><i class="fa fa-user"></i> Accounts </a></p>
-                <p class="<?php echo ($view=='message') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=message'; ?>"><i class="fa fa-envelope-o"></i> Messages
+                  <p class="<?php echo ($view=='accounts') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=accounts'; ?>"><i class="fa fa-user"></i> Contas </a></p>
+                <p class="<?php echo ($view=='message') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=message'; ?>"><i class="fa fa-envelope-o"></i> Mensagem
                   <span class="label label-success pull-right"><?php echo isset($showMsg->COUNT) ? $showMsg->COUNT : 0;?></span></a></p>
-                   <p class="<?php echo ($view=='notification') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=notification'; ?>"><i class="fa fa-bell-o"></i> Notification
+                   <p class="<?php echo ($view=='notification') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=notification'; ?>"><i class="fa fa-bell-o"></i> Notificação
                   <span class="label label-success pull-right"><?php echo $notif; ?></span></a></p>
 
                     <p class=""><a href="<?php echo web_root.'logout.php';?>">Logout</span></a></p>
@@ -153,7 +153,7 @@
                                     <button class="close" data-dismiss="modal" type=
                                     "button">×</button>
 
-                                    <h4 class="modal-title" id="myModalLabel">Choose Image.</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Escolha a imagem.</h4>
                                 </div>
 
                                 <form action="controller.php?action=photos" enctype="multipart/form-data" method=
@@ -179,8 +179,8 @@
 
                                     <div class="modal-footer">
                                         <button class="btn btn-default" data-dismiss="modal" type=
-                                        "button">Close</button> <button  class="btn btn-primary"
-                                        name="savephoto" type="submit">Upload Photo</button>
+                                        "button">Fechar</button> <button  class="btn btn-primary"
+                                        name="savephoto" type="submit">Carregar Foto</button>
                                     </div>
                                 </form>
                             </div><!-- /.modal-content -->

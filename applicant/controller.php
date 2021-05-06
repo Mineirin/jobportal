@@ -30,8 +30,8 @@ switch ($action) {
 		$birthdate =  date_format(date_create($_POST['BIRTHDATE']),'Y-m-d');
 
 			$age = date_diff(date_create($birthdate),date_create('today'))->y;
-		 	if ($age < 20 ){
-		       message("Invalid age. 20 years old and above is allowed.", "error");
+		 	if ($age < 18 ){
+		       message("Idade inválida. 18 anos ou mais é permitido.", "error");
 		       redirect("index.php?view=accounts");
 
 		    }else{ 
@@ -50,7 +50,7 @@ switch ($action) {
 					$applicant->DEGREE = $_POST['DEGREE'];
 					$applicant->update($_SESSION['APPLICANTID']);
 
-					message("Account has been updated!", "success");
+					message("A conta foi atualizada!", "success");
 					redirect("index.php?view=accounts");
 	    	}
 	}
@@ -65,7 +65,7 @@ switch ($action) {
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("Nenhuma imagem selecionada!", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 		}else{
 	 
@@ -75,7 +75,7 @@ switch ($action) {
 				@$image_size= getimagesize($_FILES['photo']['tmp_name']);
 
 			if ($image_size==FALSE ) {
-				message("Uploaded file is not an image!", "error");
+				message("O arquivo carregado não é uma imagem!", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 			}else{
 					//uploading the file
@@ -107,7 +107,7 @@ global $mydb;
 		$mydb->setQuery($sql); 
 		$res = $mydb->executeQuery();
 
-		message("File has been uploaded!", "success");
+		message("O upload do arquivo está completo!", "success");
 		redirect("index.php?tab=files");
 	 
 
@@ -127,11 +127,11 @@ function UploadImage(){
 		 if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
 			return  date("dmYhis") . basename($_FILES["picture"]["name"]);
 		}else{
-			echo "Error Uploading File";
+			echo "Erro ao enviar arquivo";
 			exit;
 		}
 	}else{
-			echo "File Not Supported";
+			echo "Arquivo não compatível";
 			exit;
 		}
 } 

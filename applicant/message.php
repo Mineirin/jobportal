@@ -18,11 +18,11 @@ if (!isset($_GET['p'])) {
         <div class="col-md-12">
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Messages</h3>
+              <h3 class="box-title">Mensagem</h3>
 
               <div class="box-tools pull-right" style="margin-bottom: 5px;">
                 <div class="has-feedback">
-                  <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                  <input type="text" class="form-control input-sm" placeholder="Procurar correspondência">
                   <span class="fa fa-search form-control-feedback" style="margin-top: -25px"></span>
                 </div>
               </div>
