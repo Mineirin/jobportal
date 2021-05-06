@@ -3,8 +3,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
-          	<p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
+          	<p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="http://takinamao.com/JOBPORTAL/">Início <i class="ion-ios-arrow-forward"></i></a></span> <span>Sobre</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Sobre nós</h1>
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
     	<div class="one-half img" style="background-image: url(<?php echo web_root; ?>plugins/jobportal/images/about.jpg);"></div>
     	<div class="one-half ftco-animate">
         <div class="heading-section ftco-animate ">
-          <h2 class="mb-4"><span>We Are The Takinamao Agency</span></h2>
+          <h2 class="mb-4"><span>Nós somos a agência Takinamao</span></h2>
         </div>
         <div>
   				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
@@ -26,8 +26,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4"><span>Happy</span> Clients</h2>
+          	<span class="subheading">Testemunhos</span>
+            <h2 class="mb-4"><span>Clientes</span> Felizes</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -126,7 +126,7 @@
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="40000">0</strong>
-		                <span>Members</span>
+		                <span>Membros</span>
 		              </div>
 		            </div>
 		          </div>
@@ -134,7 +134,7 @@
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="30000">0</strong>
-		                <span>Resume</span>
+		                <span>Resumo</span>
 		              </div>
 		            </div>
 		          </div>
@@ -142,7 +142,7 @@
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="10500">0</strong>
-		                <span>Company</span>
+		                <span>Empresa</span>
 		              </div>
 		            </div>
 		          </div>

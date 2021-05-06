@@ -5,7 +5,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
             <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Nós temos <span class="number" data-number="853615">0</span> ótimas ofertas de trabalho que você merece!</p>
-            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Seu emprego <br><span>dos sonhos está esperando</span></h1>
+            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">O emprego <br><span>dos sonhos está esperando</span></h1>
             
             <div class="ftco-search">
               <div class="row">
@@ -26,7 +26,7 @@
                             <div class="form-group">
                               <div class="form-field">
                                 <div class="icon"><span class="icon-briefcase"></span></div>
-                                <input type="text"  name="SEARCH" class="form-control" placeholder="eg. Garphic. Web Developer">
+                                <input type="text"  name="SEARCH" class="form-control" placeholder="Cargo ou palavra-chave">
                               </div>
                             </div>
                           </div>
@@ -55,13 +55,13 @@
                               <div class="form-field">
                                 <div class="icon"><span class="icon-map-marker"></span></div>
                                  <select  name="COMPANY" class="form-control">
-                                    <option value="">Empresa</option>
+                                    <option value="">Localização</option>
                                    <?php
-                                      $sql = "SELECT * FROM tblcompany";
+                                         $sql = "SELECT * FROM `cidade`";
                                       $mydb->setQuery($sql);
                                       $res = $mydb->loadResultList();
                                       foreach ($res as $row) { 
-                                        echo '<option>'.$row->COMPANYNAME.'</option>';
+                                        echo '<option>'.$row->descricao.'</option>';
                                       }
                                     ?>
                                   </select>
@@ -71,7 +71,7 @@
                           <div class="col-md">
                             <div class="form-group">
                               <div class="form-field">
-                                <input type="submit" value="Search" class="form-control btn btn-primary">
+                                <input type="submit" value="Buscar" class="form-control btn btn-primary">
                               </div>
                             </div>
                           </div>
@@ -204,7 +204,7 @@
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="https://www.jobbol.com.br/vagas/2047407-desenvolvedor-front-end-jr-campinas-sp?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Candidatar-se</a>
+                <a href="https://www.jobbol.com.br/vagas/2047407-desenvolvedor-front-end-jr-campinas-sp?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -217,20 +217,20 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Full Stack Developer</h2>
+                 <h2 class="mr-3 text-black h4">OPERADOR DE COBRANCA JR</h2>
                  <div class="badge-wrap">
-                  <span class="bg-warning text-white badge py-2 px-3">Full Time</span>
+                  <span class="bg-warning text-white badge py-2 px-3">Home office</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Google, Inc.</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="https://algartech.com/pt/">ALGAR TECH</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
-                <a href="#" class="btn btn-danger rounded-circle btn-favorite d-flex align-items-center">
+                <a href="https://www.portalsinergyrh.com.br/Portal/MeuPortal/VisualizarVaga?idVaga=731333" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
+                <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
               </div>
@@ -242,19 +242,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Open Source Interactive Developer</h2>
+                 <h2 class="mr-3 text-black h4">ANALISTA ATENDIMENTO JR</h2>
                  <div class="badge-wrap">
-                  <span class="bg-info text-white badge py-2 px-3">Freelance</span>
+                  <span class="bg-info text-white badge py-2 px-3">Sem Detalhes</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">New York Times</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="https://www.kroton.com.br/">Kroton</a></div>
+                 <div><span class="icon-my_location"></span> <span>Valinhos, SP</span></div>
                </div>
               </div>
               
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://jobs.kenoby.com/kroton/job/analista-atendimento-jr/6083084ea08de26c8e531ceb?utm_source=indeed&utm_campaign=kenoby&utm_medium=post" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -267,19 +267,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Frontend Development</h2>
+                 <h2 class="mr-3 text-black h4">Analista de Suporte</h2>
                  <div class="badge-wrap">
-                  <span class="bg-secondary text-white badge py-2 px-3">Internship</span>
+                  <span class="bg-secondary text-white badge py-2 px-3">Home office</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Sem Detalhes</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://www.jobbol.com.br/vagas/2050793-analista-de-suporte-campinas-sp-3?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -291,19 +291,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Open Source Interactive Developer</h2>
+                 <h2 class="mr-3 text-black h4">Auxiliar de Cobrança</h2>
                  <div class="badge-wrap">
-                  <span class="bg-danger text-white badge py-2 px-3">Temporary</span>
+                  <span class="bg-danger text-white badge py-2 px-3">Tempo Integral</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">New York Times</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Ramo funerário</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
               
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://www.jobbol.com.br/vagas/2053195-auxiliar-de-cobranca-campinas-sp?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -316,19 +316,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                 <div class="job-post-item-header d-flex align-items-center">
-                  <h2 class="mr-3 text-black h3">Frontend Development</h2>
+                  <h2 class="mr-3 text-black h3">Assistente de Suporte Técnico - Junior</h2>
                   <div class="badge-wrap">
-                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
+                   <span class="bg-primary text-white badge py-2 px-3">Sem Detalhes</span>
                   </div>
                 </div>
                 <div class="job-post-item-body d-block d-md-flex">
-                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-                  <div><span class="icon-map-marker"></span> <span>Western City, UK</span></div>
+                  <div class="mr-3"><span class="icon-layers"></span> <a href="https://www.ibm.com/br-pt">IBM</a></div>
+                  <div><span class="icon-map-marker"></span> <span>Hortolândia, SP</span></div>
                 </div>
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://careers.ibm.com/job/12388036/assistente-de-suporte-t-cnico-junior-hortol-ndia-br/?codes=JB_Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -341,19 +341,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Full Stack Developer</h2>
+                 <h2 class="mr-3 text-black h4">Auxiliar Administrativo</h2>
                  <div class="badge-wrap">
-                  <span class="bg-warning text-white badge py-2 px-3">Full Time</span>
+                  <span class="bg-warning text-white badge py-2 px-3">Tempo Integral, Meio Período</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Google, Inc.</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Parcamp</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://www.jobbol.com.br/vagas/2053017-auxiliar-administrativo-campinas-sp-30?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -366,19 +366,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Open Source Interactive Developer</h2>
+                 <h2 class="mr-3 text-black h4">Agente Júnior de Atendimento ao Cliente</h2>
                  <div class="badge-wrap">
-                  <span class="bg-info text-white badge py-2 px-3">Freelance</span>
+                  <span class="bg-info text-white badge py-2 px-3">Tempo Integral, Meio Período - Home office temporário</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">New York Times</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="https://sencinet.com/?lang=pt-br">Sencinet Brasil</a></div>
+                 <div><span class="icon-my_location"></span> <span>Hortolândia, SP</span></div>
                </div>
               </div>
               
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://sencinetbrasil.gupy.io/job/eyJqb2JJZCI6ODM3ODI0LCJzb3VyY2UiOiJpbmRlZWQifQ==?jobBoardSource=indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -391,19 +391,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Frontend Development</h2>
+                 <h2 class="mr-3 text-black h4">Suporte Técnico</h2>
                  <div class="badge-wrap">
-                  <span class="bg-secondary text-white badge py-2 px-3">Internship</span>
+                  <span class="bg-secondary text-white badge py-2 px-3">Tempo Integral</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="https://sysfar.com.br/">SysFar</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
 
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://www.jobbol.com.br/vagas/2053191-suporte-tecnico-campinas-sp-2?utm_source=Indeed&utm_medium=organic&utm_campaign=Indeed" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -415,19 +415,19 @@
 
               <div class="mb-4 mb-md-0 mr-5">
                <div class="job-post-item-header d-flex align-items-center">
-                 <h2 class="mr-3 text-black h4">Open Source Interactive Developer</h2>
+                 <h2 class="mr-3 text-black h4">Analista de Cobrança</h2>
                  <div class="badge-wrap">
-                  <span class="bg-danger text-white badge py-2 px-3">Temporary</span>
+                  <span class="bg-danger text-white badge py-2 px-3">Tempo Integral, Meio Período - Home office temporário</span>
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="icon-layers"></span> <a href="#">New York Times</a></div>
-                 <div><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                 <div class="mr-3"><span class="icon-layers"></span> <a href="https://www.ramoss.com.br/">Ramoss</a></div>
+                 <div><span class="icon-my_location"></span> <span>Campinas, SP</span></div>
                </div>
               </div>
               
               <div class="ml-auto d-flex">
-                <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply Job</a>
+                <a href="https://www.ramoss.com.br/analista-de-atendimento" class="btn btn-primary py-2 mr-1">Ver Vaga</a>
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">
                   <span class="icon-heart"></span>
                 </a>
@@ -462,7 +462,7 @@
                 <div class="block-18 text-center">
                   <div class="text">
                     <strong class="number" data-number="1350000">0</strong>
-                    <span>Jobs</span>
+                    <span>Empregos</span>
                   </div>
                 </div>
               </div>
@@ -470,15 +470,7 @@
                 <div class="block-18 text-center">
                   <div class="text">
                     <strong class="number" data-number="40000">0</strong>
-                    <span>Members</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <strong class="number" data-number="30000">0</strong>
-                    <span>Resume</span>
+                    <span>Membros</span>
                   </div>
                 </div>
               </div>
@@ -486,7 +478,7 @@
                 <div class="block-18 text-center">
                   <div class="text">
                     <strong class="number" data-number="10500">0</strong>
-                    <span>Company</span>
+                    <span>Empresas</span>
                   </div>
                 </div>
               </div>
@@ -501,8 +493,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Testimonial</span>
-            <h2 class="mb-4"><span>Happy</span> Clients</h2>
+            <span class="subheading">Testemunhos</span>
+            <h2 class="mb-4"><span>Clientes</span> Felizes</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -588,8 +580,8 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Our Blog</span>
-            <h2><span>Recent</span> Blog</h2>
+            <span class="subheading">Nosso Blog</span>
+            <h2><span>Blog</span> recente</h2>
           </div>
         </div>
         <div class="row d-flex">
@@ -599,11 +591,11 @@
               </a>
               <div class="text mt-3">
                 <div class="meta mb-2">
-                  <div><a href="#">December 2, 2018</a></div>
+                  <div><a href="#">2 de dezembro de 2018</a></div>
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Mesmo o todo-poderoso Pointing não tem controle sobre os textos cegos</a></h3>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto enim non iste maxime optio, ut com</p>
               </div>
             </div>
@@ -614,11 +606,11 @@
               </a>
               <div class="text mt-3">
                 <div class="meta mb-2">
-                  <div><a href="#">December 2, 2018</a></div>
+                  <div><a href="#">2 de dezembro de 2018</a></div>
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Mesmo o todo-poderoso Pointing não tem controle sobre os textos cegos</a></h3>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis natus incidunt officia assumenda.</p>
               </div>
             </div>
@@ -629,11 +621,11 @@
               </a>
               <div class="text mt-3">
                 <div class="meta mb-2">
-                  <div><a href="#">December 2, 2018</a></div>
+                  <div><a href="#">2 de dezembro de 2018</a></div>
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Mesmo o todo-poderoso Pointing não tem controle sobre os textos cegos</a></h3>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi obcaecati praesentium,</p>
               </div>
             </div>
@@ -644,11 +636,11 @@
               </a>
               <div class="text mt-3">
                 <div class="meta mb-2">
-                  <div><a href="#">December 2, 2018</a></div>
+                  <div><a href="#">2 de dezembro de 2018</a></div>
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Mesmo o todo-poderoso Pointing não tem controle sobre os textos cegos</a></h3>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima, dolores quis, dolorum accusamu</p>
               </div>
             </div>
@@ -656,4 +648,3 @@
         </div>
       </div>
     </section>
-    

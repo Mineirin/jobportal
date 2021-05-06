@@ -32,6 +32,7 @@
 
 <?php 
 if (!isset($_SESSION['APPLICANTID'])) {
+ if (isset($_SESSION['USERID'])) {
 ?>
 
             <form action="#" class="bg-white p-5 contact-form">
@@ -144,7 +145,15 @@ if (!isset($_SESSION['APPLICANTID'])) {
               </div>
             </form>
 
- <?php }else{ ?>
+ <?php }
+else{?>
+<div class="form-group"> 
+              <h1>Faça login para poder entrar em contato.</h1>
+                    
+            </div>  
+<?php 
+}
+}else{ ?>
 
    <div class="col-md-12">
                    <div class="row">

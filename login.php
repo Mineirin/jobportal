@@ -5,7 +5,7 @@
               <div class="modal-content">
                 <div class="modal-header">
 
-                          <h4>Login</h4>
+                          <h4>Entrar</h4>
                           
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
@@ -31,7 +31,7 @@
                               <div class="col-xs-8">
                                 <div class="checkbox icheck">
                                   <label>
-                                    <input type="checkbox"> Remember Me
+                                    <input type="checkbox"> Lembre-me
                                   </label>
                                 </div>
                               </div>
@@ -50,8 +50,8 @@
                   </div>
 
                   <div class="modal-footer">
-                    <button class="btn btn-default" data-dismiss="modal">Close</button> <button class="btn btn-primary"
-                    name="btnlogin" id="btnlogin"  >Login</button>
+                    <button class="btn btn-default" data-dismiss="modal">Fechar</button> <button class="btn btn-primary"
+                    name="btnlogin" id="btnlogin"  >Entrar</button>
                   </div>
                 <!-- </form> -->
               </div><!-- /.modal-content -->

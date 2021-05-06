@@ -4,15 +4,15 @@ $content='home.php';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 switch ($view) { 
 	case 'apply' :
-        $title="Submit Application";	
+        $title="Enviar inscrição";	
 		$content='applicationform.php';		
 		break;
 	case 'login' : 
-        $title="Login";	
+        $title="Entrar";	
 		$content='login.php';		
 		break;
 	case 'company' :
-        $title="Company";	
+        $title="Empresas";	
 		$content='company.php';		
 		break;
 	case 'hiring' :
@@ -20,53 +20,53 @@ switch ($view) {
 		$content='hirring.php';		
 		break;		
 	case 'category' :
-        $title='Search for '. $_GET['search'];	
+        $title='Procurar '. $_GET['search'];	
 		$content='category.php';		
 		break;
 	case 'viewjob' :
-        $title="Job Details";	
+        $title="Detalhes do trabalho";	
 		$content='viewjob.php';		
 		break;
 	case 'success' :
-        $title="Success";	
+        $title="Sucesso";	
 		$content='success.php';		
 		break;
 	case 'register' :
-        $title="Register New Member";	
+        $title="Registrar novo membro";	
 		$content='register.php';		
 		break;
 	case 'Contact' :
-        $title='Contact Us';	
+        $title='Contate-nos';	
 		$content='Contact.php';		
 		break;	
 	case 'About' :
-        $title='About Us';	
+        $title='Sobre nós';	
 		$content='About.php';		
 		break;	
 	case 'advancesearch' :
-        $title='Advance Search';	
+        $title='Busca avançada';	
 		$content='advancesearch.php';		
 		break;	
 
 	case 'result' :
-        $title='Advance Search';	
+        $title='resultado';	
 		$content='advancesearchresult.php';		
 		break;
 	case 'search-company' :
-        $title='Search by Company';	
+        $title='Pesquisa por empresa';	
 		$content='searchbycompany.php';		
 		break;	
 	case 'search-function' :
-        $title='Search by Function';	
+        $title='Pesquisa por Função';	
 		$content='searchbyfunction.php';		
 		break;	
 	case 'search-jobtitle' :
-        $title='Search by Job Title';	
+        $title='Pesquisa por cargo';	
 		$content='searchbytitle.php';		
 		break;						
 	default :
 	    $active_home='active';
-	    $title="Home";	
+	    $title="Início";	
 		$content ='home.php';		
 }
 require_once("theme/templates.php");
