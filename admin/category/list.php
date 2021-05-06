@@ -18,8 +18,8 @@
 				  		<!-- <th>No.</th> -->
 				  		<th>
 				  		 <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">  -->
-				  		 Category</th> 
-				  		 <th width="10%" align="center">Action</th>
+				  		 Categoria</th> 
+				  		 <th width="10%" align="center">Ação</th>
 				  	</tr>	
 				  </thead> 
 				  <tbody>

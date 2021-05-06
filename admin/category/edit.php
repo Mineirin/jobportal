@@ -12,17 +12,17 @@
  <form class="form-horizontal span6" action="controller.php?action=edit" method="POST">
 
           <fieldset>
-            <legend>Update Category</legend>
+            <legend>Atualizar Categoria</legend>
                       
 
                   <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for="CATEGORY">Category:</label>
+                      <label class="col-md-4 control-label" for="CATEGORY">Categoria:</label>
 
                       <div class="col-md-8">
                        <input  id="CATEGORYID" name="CATEGORYID"   type="HIDDEN" value="<?php echo $singlecategory->CATEGORYID; ?>">
                          <input class="form-control input-sm" id="CATEGORY" name="CATEGORY" placeholder=
-                            "Category" type="text" value="<?php echo $singlecategory->CATEGORY; ?>">
+                            "Categoria" type="text" value="<?php echo $singlecategory->CATEGORY; ?>">
                       </div>
                     </div>
                   </div>
@@ -36,7 +36,7 @@
 
                       <div class="col-md-8">
                       <!-- <a href="index.php" class="btn btn_fixnmix"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Back</strong></a> -->
-                      <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                      <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Salvar</button>
                    
                       </div>
                     </div>
