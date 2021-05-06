@@ -14,7 +14,7 @@ require_once("../include/initialize.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ERIS | Log in</title>
+  <title>AdminTakinamao|Entrar</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -40,17 +40,17 @@ require_once("../include/initialize.php");
   </div> -->
   <!-- /.login-logo -->
   <div class="login-box-body" style="min-height: 400px;">
-    <h1 class="login-box-msg">Login to ERIS</h1>
+    <h1 class="login-box-msg">Entrar/Takinamao</h1>
     <hr/>
     <p><?php check_message(); ?></p>
 
     <form action="" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="user_email">
+        <input type="text" class="form-control" placeholder="Nome de usuário" name="user_email">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="user_pass">
+        <input type="password" class="form-control" placeholder="Senha" name="user_pass">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
         <div class="row">
@@ -63,7 +63,7 @@ require_once("../include/initialize.php");
         </div>   -->
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">ENTRAR</button>
         </div>
       </div>
         <!-- /.col -->
@@ -104,7 +104,7 @@ if(isset($_POST['btnLogin'])){
     //make use of the static function, and we passed to parameters
     $res = $user->userAuthentication($email, $h_upass);
     if ($res==true) { 
-       message("You logon as ".$_SESSION['ROLE'].".","success");
+       message("Você entrou como ".$_SESSION['ROLE'].".","success");
       // if ($_SESSION['ROLE']=='Administrator' || $_SESSION['ROLE']=='Cashier'){
 
         $_SESSION['ADMIN_USERID'] = $_SESSION['USERID'];
@@ -123,7 +123,7 @@ if(isset($_POST['btnLogin'])){
          redirect(web_root."admin/index.php");
       // } 
     }else{
-      message("Account does not exist! Please contact Administrator.", "error");
+      message("Conta não existe! Entre em contato com o administrador.", "error");
        redirect(web_root."admin/login.php"); 
     }
  }

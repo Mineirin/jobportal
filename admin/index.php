@@ -24,7 +24,7 @@ switch ($view) {
     break;  
   default :
  
-      $title="Home"; 
+      $title="Início"; 
     $content ='home.php';    
 }
 require_once("theme/templates.php");
