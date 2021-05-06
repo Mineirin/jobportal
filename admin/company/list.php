@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Companies  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Company</a>  </h1>
+            <h1 class="page-header">Lista de empresas <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i>  Adicionar empresa</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -16,10 +16,10 @@
 				  <thead>
 				  	<tr>
 				  		<!-- <th>No.</th> -->
-				  		<th>Name</th> 
-				  		<th>Address</th> 
-				  		<th>Contact No.</th> 
-				  		 <th width="10%" align="center">Action</th>
+				  		<th>Nome</th> 
+				  		<th>Endereço</th> 
+				  		<th>Contato</th> 
+				  		 <th width="10%" align="center">Ação</th>
 				  	</tr>	
 				  </thead> 
 				  <tbody>

@@ -58,7 +58,7 @@ switch ($action) {
 			// $company->COMPANYMISSION	= $_POST['COMPANYMISSION'];
 			$company->update($_POST['COMPANYID']);
 
-			message("Company has been updated!", "success");
+			message("Empresa foi atualizada!", "sucesso");
 			redirect("index.php");
 		}
 
@@ -76,7 +76,7 @@ switch ($action) {
 			$company = New Company();
 			$company->delete($id);
 
-			message("Company has been Deleted!","info");
+			message("Empresa foi excluída!","info");
 			redirect('index.php');
 
 		// $id = $_POST['selector'];
