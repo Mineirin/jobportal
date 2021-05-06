@@ -5,18 +5,18 @@
 
 ?> 
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Users  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add User</a>  </h1>
+            <h1 class="page-header">Lista de usuários <a href="index.php?view=add" class="btn btn-primary btn-xs"><i class="fa fa-plus-circle fw-fa"></i>Adicionar usuário</a></h1>
        		</div>
         	<!-- /.col-lg-12 --> 
    		 	<div class="col-lg-12"> 
 				<table id="dash-table" class="table  table-bordered table-hover table-responsive" style="font-size:12px;" cellspacing="0"> 
 				  <thead>
 				  	<tr>
-				  		<th>Account ID</th>
-				  		<th> Account Name</th>
-				  		<th>Username</th>
-				  		<th>Role</th>
-				  		<th width="10%" >Action</th>
+				  		<th>ID da conta</th>
+				  		<th>Nome da conta</th>
+				  		<th>Nome de usuário</th>
+				  		<th>Função</th>
+				  		<th width="10%" >Ação</th>
 				 
 				  	</tr>	
 				  </thead> 

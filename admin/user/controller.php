@@ -32,7 +32,7 @@ switch ($action) {
 
 		if ($_POST['U_NAME'] == "" OR $_POST['U_USERNAME'] == "" OR $_POST['U_PASS'] == "") {
 			$messageStats = false;
-			message("All field is required!","error");
+			message("Todos os campos são obrigatórios!","error");
 			redirect('index.php?view=add');
 		}else{	
 			$user = New User();
@@ -70,7 +70,7 @@ switch ($action) {
 
 			if (isset($_GET['view'])) {
 				# code...
-				  message("Profile has been updated!", "success");
+				  message("O perfil foi atualizado!!", "success");
 				redirect("index.php?view=view");
 			}else{ 
 				message("[". $_POST['U_NAME'] ."] has been updated!", "success");
@@ -101,7 +101,7 @@ switch ($action) {
 				$user = New User();
 	 		 	$user->delete($id);
 			 
-			message("User has been deleted!","info");
+			message("O usuário foi excluído!","info");
 			redirect('index.php');
 		// }
 		// }
@@ -119,7 +119,7 @@ switch ($action) {
 
 
 		if ( $errofile > 0) {
-				message("No Image Selected!", "error");
+				message("Nenhuma imagem selecionada!", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 		}else{
 	 
@@ -129,7 +129,7 @@ switch ($action) {
 				@$image_size= getimagesize($_FILES['photo']['tmp_name']);
 
 			if ($image_size==FALSE ) {
-				message("Uploaded file is not an image!", "error");
+				message("O arquivo enviado não é uma imagem!", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 			}else{
 					//uploading the file
