@@ -51,7 +51,7 @@
     <!-- Logo -->
     <a href="<?php echo web_root;?>/admin/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>JB</b></span>
+      <span class="logo-mini"><b>TK</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Takinamao</b></span>
     </a>
@@ -59,7 +59,7 @@
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Alternar de navegação</span>
       </a>
 
       <div class="navbar-custom-menu">
@@ -84,10 +84,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="<?php echo web_root.'admin/user/index.php?view=view&id='.$_SESSION['ADMIN_USERID'] ;?>" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?php echo web_root.'admin/user/index.php?view=view&id='.$_SESSION['ADMIN_USERID'] ;?>" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php echo web_root ;?>admin/logout.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo web_root ;?>admin/logout.php" class="btn btn-default btn-flat">Sair</a>
                 </div>
               </li>
             </ul>
@@ -134,8 +134,8 @@
 
                                     <div class="modal-footer">
                                         <button class="btn btn-default" data-dismiss="modal" type=
-                                        "button">Close</button> <button class="btn btn-primary"
-                                        name="savephoto" type="submit">Upload Photo</button>
+                                        "button">Fechar</button> <button class="btn btn-primary"
+                                        name="savephoto" type="submit">Carregar foto</button>
                                     </div>
                                 </form>
                             </div><!-- /.modal-content-->
@@ -154,27 +154,27 @@
       <ul class="sidebar-menu"> 
         <li  class="<?php echo (currentpage() == 'index.php') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>  
+            <i class="fa fa-dashboard"></i> <span>Painel</span>  
           </a> 
         </li> 
         <li class="<?php echo (currentpage() == 'company') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/company/">
-            <i class="fa fa-building"></i> <span>Company</span> 
+            <i class="fa fa-building"></i> <span>Empresas</span> 
           </a>
         </li>
         <li class="<?php echo (currentpage() == 'vacancy') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/vacancy/">
-            <i class="fa fa-suitcase"></i> <span>Vacancy</span> 
+            <i class="fa fa-suitcase"></i> <span>Vagas</span> 
           </a>
         </li>
         <li class="<?php echo (currentpage() == 'employee') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/employee/">
-            <i class="fa fa-users"></i> <span>Employee</span> 
+            <i class="fa fa-users"></i> <span>Funcionários</span> 
           </a>
         </li> 
         <li class="<?php echo (currentpage() == 'applicants') ? "active" : false;?>" > 
           <a href="<?php echo web_root ;?>admin/applicants/">
-            <i class="fa fa-users"></i> <span>Applicants</span> 
+            <i class="fa fa-users"></i> <span>Candidatos</span> 
             <span class="label label-primary pull-right">
               <?php
                 $sql = "SELECT count(*) as 'APPL' FROM `tbljobregistration` WHERE `PENDINGAPPLICATION`=1";
@@ -187,7 +187,7 @@
         </li> 
         <li class="<?php echo (currentpage() == 'category') ? "active" : false;?>" > 
           <a href="<?php echo web_root ;?>admin/category/">
-            <i class="fa fa-list"></i> <span>Category</span>  
+            <i class="fa fa-list"></i> <span>Categoria</span>  
           </a>
         </li> 
        <!--  <li class="treeview">
@@ -208,7 +208,7 @@
          
          <li class="<?php echo (currentpage() == 'user') ? "active" : false;?>">
           <a href="<?php echo web_root; ?>admin/user/">
-            <i class="fa fa-user"></i> <span>Manage Users</span> </a>
+            <i class="fa fa-user"></i> <span>Gerenciar usuários</span> </a>
         </li>
         
       </ul>
@@ -226,7 +226,7 @@
       <ol class="breadcrumb">
         <?php
 
-          if ($title!='Home') {
+          if ($title!='Início') {
             # code... 
             $active_title = '';
             if (isset($_GET['view'])) {
@@ -235,7 +235,7 @@
             }else{
               $active_title = '<li class='.$active_title.'>'.$title.'</li>';
             }
-            echo '<li><a href='.web_root.'admin/><i class="fa fa-dashboard"></i> Home</a></li>';
+            echo '<li><a href='.web_root.'admin/><i class="fa fa-dashboard"></i> Início</a></li>';
             echo  $active_title;
             echo  isset($_GET['view']) ? '<li class="active">'.$_GET['view'].'</li>' : '';
           } 
@@ -268,7 +268,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.2
     </div>
-    <strong>Copyright &copy; 2018 <a href="#">Janno Palacios</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="#">Mineirando-Softwares</a>.</strong> All rights
     reserved.
   </footer>
 
