@@ -30,7 +30,7 @@ switch ($action) {
  
 		if ( $_POST['COMPANYID'] == "None") {
 			$messageStats = false;
-			message("All field is required!","error");
+			message("Todos os campos são obrigatórios!","error");
 			redirect('index.php?view=add');
 		}else{	
 			$job = New Jobs();
