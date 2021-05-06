@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">Lista de Vagas  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Adicionar Vaga</a>  </h1>
+            <h1 class="page-header">Lista de vagas  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i>  Adicionar vaga de emprego</a></h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -17,23 +17,23 @@
 				  	<tr>
 
 				  		<!-- <th>No.</th> -->
-				  		<th> Nome da empresa </th>
-						<th> Título de ocupação </th>
-						<th> Exigir não. de funcionários </th>
-						<th> Salários </th>
-						<th> Duração do emprego </th>
-						<th> Qualificação / Experiência de trabalho </th>
-						<th> Descrição do cargo </th>
-						<th> Sexo preferido </th>
-						<th> Setor de vacância </th>
-						<th> Status do trabalho </th>
-						<th width = "10%" align = "center"> Ação </th>
+				  		<th>Nome da empresa</th> 
+				  		<th>Cargo profissional</th>
+				  		<th>Número de funcionários</th>
+				  		<th>Salários</th> 
+				  		<th>Duração do emprego</th> 
+				  		<th>Qualificação/experiência de trabalho</th>
+				  		<th>Descrição do cargo</th> 
+				  		<th>Preferencia de Sexo</th> 
+				  		<th>Setor de vagas</th> 
+				  		<th>Status do trabalho</th>
+				  		<th width="10%" align="center">Ação</th>
 				  	</tr>	
 				  </thead> 
 				  <tbody>
 				  	<?php 
-				  	 // `COMPANYID`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `SECTOR_VACANCY`, `JOBSTATUS`
-				  		$mydb->setQuery("SELECT * FROM `tbljob` j, `tblcompany` c WHERE j.COMPANYID=c.COMPANYID");
+				  	  //`COMPANYID`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `SECTOR_VACANCY`, `JOBSTATUS`
+				  		$mydb->setQuery("SELECT * FROM `tbljob` j, `tblcompany` c");
 				  		$cur = $mydb->loadResultList(); 
 						foreach ($cur as $result) {
 				  		echo '<tr>';

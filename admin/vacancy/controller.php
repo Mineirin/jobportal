@@ -47,7 +47,7 @@ switch ($action) {
 			$job->DATEPOSTED						= date('Y-m-d H:i');
 			$job->create();
 
-			message("New Job Vacancy created successfully!", "success");
+			message("Nova vaga de emprego criada com sucesso!", "success");
 			redirect("index.php");
 			
 		}
@@ -59,7 +59,7 @@ switch ($action) {
 		if(isset($_POST['save'])){
 			if ( $_POST['COMPANYID'] == "None") {
 				$messageStats = false;
-				message("All field is required!","error");
+				message("Todos os campos são obrigatórios!","error");
 				redirect('index.php?view=add');
 			}else{	
 				$job = New Jobs();
@@ -75,7 +75,7 @@ switch ($action) {
 				$job->SECTOR_VACANCY					= $_POST['SECTOR_VACANCY']; 
 				$job->update($_POST['JOBID']);
 
-				message("Job Vacancy has been updated!", "success");
+				message("A vaga de emprego foi atualizada!", "success");
 				redirect("index.php");
 			}
 		}
@@ -94,7 +94,7 @@ switch ($action) {
 			$job = New Jobs();
 			$job->delete($id);
 
-			message("Company has been Deleted!","info");
+			message("Empresa foi excluída; empresa foi excluída!","info");
 			redirect('index.php');
 
 		// $id = $_POST['selector'];
