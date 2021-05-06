@@ -6,7 +6,7 @@
 ?> 
 	<div class="row">
     <div class="col-lg-12">
-            <h1 class="page-header">List of Applicant's   </h1>
+            <h1 class="page-header">Lista de Candidatos</h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -17,12 +17,12 @@
 
 							  <thead>
 							  	<tr>
-									<th>Applicant</th>
-									<th>Job Title</th>
-									<th>Company</th>
-									<th>Applied Date</th> 
-									<th>Remarks</th>
-									<th width="14%" >Action</th> 
+									<th>Candidato</th>
+                                    <th>Cargo</th>
+                                    <th>Empresa</th>
+                                    <th>Data de aplicação</th>
+                                    <th>Observações</th>
+                                    <th width = "14%">Ação</th>
 							  	</tr>	
 							  </thead> 
 							  <tbody>
@@ -35,16 +35,16 @@
 									foreach ($cur as $result) { 
 							  		echo '<tr>';
 							  		// echo '<td width="5%" align="center"></td>';
-							  		echo '<td>'. $result->APPLICANT.'</td>';
-							  		echo '<td>' . $result->OCCUPATIONTITLE.'</a></td>';
-							  		echo '<td>' . $result->COMPANYNAME.'</a></td>'; 
-							  		echo '<td>'. $result->REGISTRATIONDATE.'</td>';
-							  		echo '<td>'. $result->REMARKS.'</td>';  
+							  		echo '<td>'. $result->CANDIDATO.'</td>';
+							  		echo '<td>' . $result->TÍTULODEOCUPAÇÃO.'</a></td>';
+							  		echo '<td>' . $result->NOMEDAEMPRESA.'</a></td>'; 
+							  		echo '<td>'. $result->DATADEREGISTRO.'</td>';
+							  		echo '<td>'. $result->OBSERVAÇÕES.'</td>';  
 					  				echo '<td align="center" >    
-					  		             <a title="View" href="index.php?view=view&id='.$result->REGISTRATIONID.'"  class="btn btn-info btn-xs  ">
+					  		             <a title="View" href="index.php?view=view&id='.$result->IDDOREGISTRO.'"  class="btn btn-info btn-xs  ">
 					  		             <span class="fa fa-info fw-fa"></span> View</a> 
-					  		             <a title="Remove" href="controller.php?action=delete&id='.$result->REGISTRATIONID.'"  class="btn btn-danger btn-xs  ">
-					  		             <span class="fa fa-trash-o fw-fa"></span> Remove</a> 
+					  		             <a title="Remove" href="controller.php?action=delete&id='.$result->IDDOREGISTRO.'"  class="btn btn-danger btn-xs  ">
+					  		             <span class="fa fa-trash-o fw-fa"></span> Remover</a> 
 					  					 </td>';
 							  		echo '</tr>';
 							  	} 
