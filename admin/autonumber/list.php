@@ -22,9 +22,9 @@
 								  	<tr> 
 								  		<th>
 								  		 <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">  -->
-								  		 Autonumber</th> 
+								  		 Numeração automática</th> 
 								  		  <th>Key</th>
-								  		 <th width="10%" align="center">Action</th>
+								  		 <th width="10%" align="center">Ação</th>
 								  	</tr>	
 								  </thead>  
 								  <tbody>
@@ -46,7 +46,7 @@
 									
 								</table>
 								     <div class="btn-group">
-								  <a href="index.php?view=add" class="btn btn-default">New</a>
+								  <a href="index.php?view=add" class="btn btn-default">Novo</a>
 									<?php
 									if($_SESSION['UROLE']=='Administrator'){
 									// echo '<button type="submit" class="btn btn-default" name="delete"><span class="glyphicon glyphicon-trash"></span> Delete Selected</button'
