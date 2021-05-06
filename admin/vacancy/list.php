@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Vacancies  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Job Vacancy</a>  </h1>
+            <h1 class="page-header">Lista de Vagas  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Adicionar Vaga</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -17,17 +17,17 @@
 				  	<tr>
 
 				  		<!-- <th>No.</th> -->
-				  		<th>Company Name</th> 
-				  		<th>Occupation Title</th> 
-				  		<th>Require no. of Employees</th> 
-				  		<th>Salaries</th> 
-				  		<th>Duration of Employment</th> 
-				  		<th>Qualification/Work experience</th> 
-				  		<th>Job Description</th> 
-				  		<th>Prefered Sex</th> 
-				  		<th>Sector of Vacancy</th> 
-				  		<th>Job Status</th> 
-				  		 <th width="10%" align="center">Action</th>
+				  		<th> Nome da empresa </th>
+						<th> Título de ocupação </th>
+						<th> Exigir não. de funcionários </th>
+						<th> Salários </th>
+						<th> Duração do emprego </th>
+						<th> Qualificação / Experiência de trabalho </th>
+						<th> Descrição do cargo </th>
+						<th> Sexo preferido </th>
+						<th> Setor de vacância </th>
+						<th> Status do trabalho </th>
+						<th width = "10%" align = "center"> Ação </th>
 				  	</tr>	
 				  </thead> 
 				  <tbody>
