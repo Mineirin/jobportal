@@ -21,18 +21,18 @@
   $y = date_format(date_create($emp->BIRTHDATE),'Y');
 
 
-  if ($emp->SEX == 'Male') {
+  if ($emp->SEXO == 'Masculino') {
     # code...
    $radio =  '<div class="col-md-8">
              <div class="col-lg-5">
                 <div class="radio">
-                  <label><input   id="optionsRadios1" name="optionsRadios" type="radio" value="Female">Female</label>
+                  <label><input   id="optionsRadios1" name="optionsRadios" type="radio" value="Female">Feminino</label>
                 </div>
               </div>
 
               <div class="col-lg-4">
                 <div class="radio">
-                  <label><input id="optionsRadios2"  checked="True" name="optionsRadios" type="radio" value="Male">Male</label>
+                  <label><input id="optionsRadios2"  checked="True" name="optionsRadios" type="radio" value="Male">Masculino</label>
                 </div>
               </div> 
              
@@ -41,13 +41,13 @@
        $radio =  '<div class="col-md-8">
              <div class="col-lg-5">
                 <div class="radio">
-                  <label><input   id="optionsRadios1"  checked="True" name="optionsRadios" type="radio" value="Female">Female</label>
+                  <label><input   id="optionsRadios1"  checked="True" name="optionsRadios" type="radio" value="Female">Feminino</label>
                 </div>
               </div>
 
               <div class="col-lg-4">
                 <div class="radio">
-                  <label><input id="optionsRadios2"  name="optionsRadios" type="radio" value="Male"> Male</label>
+                  <label><input id="optionsRadios2"  name="optionsRadios" type="radio" value="Male"> Masculino</label>
                 </div>
               </div> 
              
@@ -55,19 +55,19 @@
 
   }
 
-   switch ($emp->CIVILSTATUS) {
+   switch ($emp->EstadoCivil) {
 
-     case 'Single':
+     case 'Solteiro':
        # code...
         $civilstatus =' <select class="form-control input-sm" name="CIVILSTATUS" id="CIVILSTATUS">
-                                      <option value="none" >Select</option>
-                                      <option SELECTED value="Single">Single</option>
-                                      <option value="Married">Married</option>
-                                      <option value="Widow" >Widow</option>
+                                      <option value="none" >Selecione</option>
+                                      <option SELECTED value="Single">Solteiro</option>
+                                      <option value="Married">Casado(a)</option>
+                                      <option value="Widow" >Viúvo(a)</option>
                                       <!-- <option value="Fourth" >Fourth</option> -->
                                   </select> ';
        break;
-     case 'Married':
+     case 'Casado':
        # code...
          $civilstatus=' <select class="form-control input-sm" name="CIVILSTATUS" id="CIVILSTATUS">
                                       <option value="none" >Select</option>
@@ -78,7 +78,7 @@
                                   </select> ';
 
        break;
-     case 'Widow':
+     case 'Viuvo':
        # code...
        $civilstatus=' <select class="form-control input-sm" name="CIVILSTATUS" id="CIVILSTATUS">
                                       <option value="none" >Select</option>
@@ -105,10 +105,10 @@
        # code...
         $workstatus ='
         <select class="form-control input-sm" name="WORKSTATS" id="WORKSTATS">
-                                      <option value="none" >Select</option>
-                                      <option value="Temporary">Temporary</option>
+                                      <option value="none" >Selecione</option>
+                                      <option value="Temporary">Temporário</option>
                                       <option SELECTED  value="Regular">Regular</option>
-                                      <option value="Probationary">Probationary</option> 
+                                      <option value="Probationary">Experimental</option> 
                                   </select> ';
        break;
 
@@ -116,20 +116,20 @@
        # code...
         $workstatus ='
         <select class="form-control input-sm" name="WORKSTATS" id="WORKSTATS">
-                                      <option value="none" >Select</option>
-                                      <option value="Temporary">Temporary</option>
+                                      <option value="none" >Selecione</option>
+                                      <option value="Temporary">Temporário</option>
                                       <option SELECTED value="Regular">Regular</option>
-                                      <option value="Probationary">Probationary</option> 
+                                      <option value="Probationary">Experimental</option> 
                                   </select> ';
        break;
      case 'Probationary':
        # code...
          $workstatus='
          <select class="form-control input-sm" name="WORKSTATS" id="WORKSTATS">
-                                      <option value="none" >Select</option>
-                                      <option value="Temporary">Temporary</option>
+                                      <option value="none" >Selecione</option>
+                                      <option value="Temporary">Temporário</option>
                                       <option value="Regular">Regular</option>
-                                      <option SELECTED value="Probationary">Probationary</option> 
+                                      <option SELECTED value="Probationary">Experimental</option> 
                                   </select> ';
 
        break; 
@@ -137,10 +137,10 @@
      default:
         $workstatus='
        <select class="form-control input-sm" name="WORKSTATS" id="WORKSTATS">
-                                      <option SELECTED value="none" >Select</option>
-                                      <option value="Temporary">Temporary</option>
+                                      <option SELECTED value="none" >Selecione</option>
+                                      <option value="Temporary">Temporário</option>
                                       <option value="Regular">Regular</option>
-                                      <option value="Probationary">Probationary</option> 
+                                      <option value="Probationary">Experimental</option> 
                                   </select> ';
         break;
        
@@ -150,7 +150,7 @@
  ?> 
  
        <div class="center wow fadeInDown">
-             <h2 class="page-header">Update Employee</h2>
+             <h2 class="page-header">atualização de Funcionário</h2>
             <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
         </div>
  
@@ -164,50 +164,50 @@
                  <div class="form-group">
                       <div class="col-md-8">
                         <label class="col-md-4 control-label" for=
-                        "FNAME">Firstname:</label>
+                        "FNAME">Primeiro nome:</label>
 
                         <div class="col-md-8"> 
                            <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
-                              "Firstname" type="text" value="<?php echo $emp->FNAME;?>"  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
+                              "Primeiro nome" type="text" value="<?php echo $emp->FNAME;?>"  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
                         </div>
                       </div>
                     </div>
-
+                    
                     <div class="form-group">
                       <div class="col-md-8">
                         <label class="col-md-4 control-label" for=
-                        "LNAME">Lastname:</label>
-
-                        <div class="col-md-8"> 
-                          <input  class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
-                              "Lastname"   value="<?php echo $emp->LNAME;?>"   onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
-                          </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="col-md-8">
-                        <label class="col-md-4 control-label" for=
-                        "MNAME">Middle Name:</label>
+                        "MNAME">Nome do meio:</label>
 
                         <div class="col-md-8"> 
                           <input  class="form-control input-sm" id="MNAME" name="MNAME" placeholder=
-                              "Middle Name"   value="<?php echo $emp->MNAME;?>"    onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
+                              "Nome do meio"   value="<?php echo $emp->MNAME;?>"    onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
                            <!-- <input class="form-control input-sm" id="DEPARTMENT_DESC" name="DEPARTMENT_DESC" placeholder=
                               "Description" type="text" value=""> -->
                         </div>
                       </div>
                     </div> 
+                    
+                    <div class="form-group">
+                      <div class="col-md-8">
+                        <label class="col-md-4 control-label" for=
+                        "LNAME">Sobrenome:</label>
+
+                        <div class="col-md-8"> 
+                          <input  class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
+                              "Sobrenome"   value="<?php echo $emp->LNAME;?>"   onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
+                          </div>
+                      </div>
+                    </div>
 
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "ADDRESS">Address:</label>
+                      "ADDRESS">Endereço:</label>
 
                       <div class="col-md-8">
                         
                          <textarea class="form-control input-sm" id="ADDRESS" name="ADDRESS" placeholder=
-                            "Address" type="text" value="" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off"><?php echo $emp->ADDRESS;?></textarea>
+                            "Endereço" type="text" value="" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off"><?php echo $emp->ADDRESS;?></textarea>
                       </div>
                     </div>
                   </div> 
@@ -216,7 +216,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "Gender">Sex:</label>
+                      "Gender">Sexo:</label>
 
                       <?php
                         echo $radio;
@@ -230,12 +230,28 @@
                         <div class="col-md-8">
                           <h4>
                           <div class="col-md-4">
-                            <label class="col-lg-12 control-label">Date of Birth</label>
+                            <label class="col-lg-12 control-label">Data de nascimento</label>
                           </div>
-
+                            
+                            
+                          <div class="col-lg-2">
+                            <select class="form-control input-sm" name="day">
+                              <option>Dia</option>
+                            <?php 
+                             echo '<option SELECTED value='.$d.'>'.$d.'</option>';
+                              $d = range(1, 31);
+                              foreach ($d as $day) {
+                                echo '<option value='.$day.'>'.$day.'</option>';
+                              }
+                            
+                            ?>
+                              
+                            </select>
+                          </div>
+                            
                           <div class="col-lg-3">
                             <select class="form-control input-sm" name="month">
-                              <option>Month</option>
+                              <option>Mês</option>
                               <?php
 
 
@@ -254,25 +270,10 @@
                               ?>
                             </select>
                           </div>
- 
-                          <div class="col-lg-2">
-                            <select class="form-control input-sm" name="day">
-                              <option>Day</option>
-                            <?php 
-                             echo '<option SELECTED value='.$d.'>'.$d.'</option>';
-                              $d = range(1, 31);
-                              foreach ($d as $day) {
-                                echo '<option value='.$day.'>'.$day.'</option>';
-                              }
-                            
-                            ?>
-                              
-                            </select>
-                          </div>
 
                           <div class="col-lg-3">
                             <select class="form-control input-sm" name="year">
-                              <option>Year</option>
+                              <option>Ano</option>
                             <?php 
                                 echo '<option SELECTED value='.$y.'>'.$y.'</option>';
                                 $years = range(2010, 1900);
@@ -292,12 +293,12 @@
                     <div class="form-group">
                                 <div class="col-md-8">
                                   <label class="col-md-4 control-label" for=
-                                  "BIRTHPLACE">Place of Birth:</label>
+                                  "BIRTHPLACE">Cidade natal:</label>
 
                                   <div class="col-md-8">
                                     
                                      <textarea class="form-control input-sm" id="BIRTHPLACE" name="BIRTHPLACE" placeholder=
-                                        "Place of Birth" type="text" value="" required  onkeyup="javascript:capitalize(this.id, this.value);" 
+                                        "Cidade natal" type="text" value="" required  onkeyup="javascript:capitalize(this.id, this.value);" 
                                         autocomplete="off"><?php echo $emp->BIRTHPLACE;?></textarea>
                                   </div>
                                 </div>
@@ -307,12 +308,12 @@
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "TELNO">Conact No.:</label>
+                                "TELNO">Contato:</label>
 
                                 <div class="col-md-8">
                                   
                                    <input class="form-control input-sm" id="TELNO" name="TELNO" placeholder=
-                                      "Conact No." type="text" any value="<?php echo $emp->TELNO;?>" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
+                                      "Contato" type="text" any value="<?php echo $emp->TELNO;?>" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
                                 </div>
                               </div>
                             </div> 
@@ -320,7 +321,7 @@
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "CIVILSTATUS">Civil Status:</label>
+                                "CIVILSTATUS">Estado Civil:</label>
 
                                 <div class="col-md-8">
                                   <?php echo $civilstatus; ?>
@@ -331,12 +332,12 @@
                             <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "POSITION">Postion:</label>
+                                "POSITION">Cargo:</label>
 
                                 <div class="col-md-8">
                                   
                                    <input class="form-control input-sm" id="POSITION" name="POSITION" placeholder=
-                                      "Postion" type="text" any value="<?php echo $emp->POSITION;?>" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
+                                      "Posição" type="text" any value="<?php echo $emp->POSITION;?>" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off">
                                 </div>
                               </div>
                             </div>
@@ -347,7 +348,7 @@
                             <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "DATEHIRED">Hired Date:</label>
+                                "DATEHIRED">Data de Contratação:</label>
 
                                 <div class="col-md-8">
                                   <div class="input-group " > 
@@ -365,9 +366,9 @@
                             <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "EMP_EMAILADDRESS">Email Address:</label> 
+                                "EMP_EMAILADDRESS">E-mail:</label> 
                                 <div class="col-md-8">
-                                   <input type="Email" class="form-control input-sm" id="EMP_EMAILADDRESS" name="EMP_EMAILADDRESS" placeholder="Email Address"   autocomplete="false" value="<?php echo  $emp->EMP_EMAILADDRESS; ?>"/> 
+                                   <input type="Email" class="form-control input-sm" id="EMP_EMAILADDRESS" name="EMP_EMAILADDRESS" placeholder="E-mail"   autocomplete="false" value="<?php echo  $emp->EMP_EMAILADDRESS; ?>"/> 
                                 </div>
                               </div>
                             </div>  
@@ -376,11 +377,11 @@
                          <div class="form-group">
                             <div class="col-md-8">
                               <label class="col-md-4 control-label" for=
-                              "COMPANYNAME">Company Name:</label>
+                              "COMPANYNAME">Nome da empresa:</label>
 
                               <div class="col-md-8"> 
                                 <select class="form-control input-sm" id="COMPANYID" name="COMPANYID">
-                                  <option value="None">Select</option>
+                                  <option value="None">Selecione</option>
                                   <?php 
                                     $sql ="Select * From tblcompany WHERE COMPANYID=".$emp->COMPANYID;
                                     $mydb->setQuery($sql);
@@ -411,7 +412,7 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
+                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Salvar</button> 
                           <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
                        </div>
                     </div>
